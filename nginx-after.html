@@ -1,0 +1,72 @@
+	</div>
+</body>
+	<!-- Script -->
+	<script type="text/javascript">
+		const IMG_RE = /\.(png|jpe?g|gif|webp|heic|avif|jxl|svg)$/i;
+
+		var pathElement = document.querySelector('#listing h1');
+		pathElement.className = 'listing';
+
+		var pathName = pathElement.innerHTML;
+		pathName = pathName.replace('Index of ', '');
+		pathElement.innerHTML = pathName;
+
+		var fileCount = 0
+			,dirCount = 0
+			,dirStatElem = document.getElementById('dir-stats')
+			,fileStatElem = document.getElementById('file-stats')
+		;
+
+		let img_a_list = [];
+		let allLinks = document.getElementsByTagName('a');
+		let i = 0;
+		for (let item of allLinks){
+			item.innerText = `${String(i++).padStart(String(allLinks.length).length, " ")}  ${item.innerText}`;
+			if (item.innerHTML.endsWith('/')){
+				dirCount += 1;
+				item.className = "directory";
+			}
+			else {
+				fileCount += 1;
+				item.className = "file";
+
+				// add all images to img_grid
+				if (IMG_RE.test(item.href)) {
+					let img_a = document.createElement("a");
+					img_a.href = item.href;
+					let img = document.createElement("img");
+					img.src = item.href;
+					img.className = "grid_img";
+					img_a.append(img);
+					img_a_list.push(img_a);
+				}
+			}
+		}
+		if (img_a_list.length) {
+			let body = document.getElementsByTagName("body")[0];
+			let img_grid = document.createElement("div");
+			img_grid.id = "img_grid";
+			for (let img_a of img_a_list)
+				img_grid.append(img_a);
+			body.append(img_grid);
+		}
+
+		var parentFolderElement = document.querySelector("a[href='../']");
+		parentFolderElement.innerHTML = `<span style='color: #1a8fff;'>${String(0).padStart(String(allLinks.length).length, " ")}  ..</span><span style='color: #dddddd;'>/</span>`;
+
+		if (dirCount == 1){
+			dirStatElem.innerHTML = dirCount + " directory";
+		}
+		else {
+			dirStatElem.innerHTML = dirCount + " directories";
+		}
+
+		if (fileCount == 1){
+			fileStatElem.innerHTML = fileCount + " file";
+		}
+		else {
+			fileStatElem.innerHTML = fileCount + " files";
+		}
+
+	</script>
+</html>

@@ -1,0 +1,111 @@
+a.file,
+a.file.link-file[href] {
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+a[href$=".ppt"].file,
+a[href$=".pptx"].file,
+a.file.link-powerpoint[href] {
+	color: #e45d19;
+}
+a[href$=".gif"].file,
+a[href$=".jpg"].file,
+a[href$=".jpeg"].file,
+a[href$=".png"].file,
+a[href$=".bmp"].file,
+a[href$=".tif"].file,
+a.file.link-image[href] {
+	color: #cecb00;
+}
+a[href$=".zip"].file,
+a[href$=".zipx"].file,
+a[href$=".rar"].file,
+a[href$=".tar"].file,
+a[href$=".tar.xz"].file,
+a[href$=".tar.gz"].file,
+a[href$=".gz"].file,
+a[href$=".dmg"].file,
+a[href$=".iso"].file,
+a.file.link-archive[href] {
+	color: #cc0403;
+}
+a[href$=".wav"].file,
+a[href$=".mp3"].file,
+a[href$=".fla"].file,
+a[href$=".flac"].file,
+a[href$=".ra"].file,
+a[href$=".rma"].file,
+a[href$=".aif"].file,
+a[href$=".aiff"].file,
+a[href$=".aa"].file,
+a[href$=".aac"].file,
+a[href$=".aax"].file,
+a[href$=".ac3"].file,
+a[href$=".au"].file,
+a[href$=".ogg"].file,
+a[href$=".avr"].file,
+a[href$=".3ga"].file,
+a[href$=".flac"].file,
+a[href$=".mid"].file,
+a[href$=".midi"].file,
+a[href$=".m4a"].file,
+a[href$=".mp4a"].file,
+a[href$=".amz"].file,
+a[href$=".mka"].file,
+a[href$=".asx"].file,
+a[href$=".pcm"].file,
+a[href$=".m3u"].file,
+a[href$=".wma"].file,
+a[href$=".xwma"].file,
+a.file.link-audio[href] {
+	color: #cb1ed1;
+}
+a[href$=".avi"].file,
+a[href$=".mpg"].file,
+a[href$=".mp4"].file,
+a[href$=".mkv"].file,
+a[href$=".mov"].file,
+a[href$=".wmv"].file,
+a[href$=".vp6"].file,
+a[href$=".264"].file,
+a[href$=".vid"].file,
+a[href$=".rv"].file,
+a[href$=".webm"].file,
+a[href$=".swf"].file,
+a[href$=".h264"].file,
+a[href$=".flv"].file,
+a[href$=".mk3d"].file,
+a[href$=".gifv"].file,
+a[href$=".oggv"].file,
+a[href$=".3gp"].file,
+a[href$=".m4v"].file,
+a[href$=".movie"].file,
+a[href$=".divx"].file,
+a.file.link-video[href] {
+	color: #cb1ed1;
+}
+
+/* executables */
+a[href$=".exe"].file,
+a[href$=".jar"].file,
+a[href$=".dll"].file,
+a[href$=".bat"].file,
+a[href$=".pl"].file,
+a[href$=".scr"].file,
+a[href$=".msi"].file,
+a[href$=".app"].file,
+a[href$=".deb"].file,
+a[href$=".apk"].file,
+a[href$=".jar"].file,
+a[href$=".vb"].file,
+a[href$=".prg"].file,
+a[href$=".sh"].file,
+a.file.link-exe[href] {
+	color: #23fd00;
+}
+
+a[href$="/"].directory {
+	color: #1a8fff;
+}
