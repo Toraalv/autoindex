@@ -16,6 +16,10 @@ a[href$=".jpeg"].file,
 a[href$=".png"].file,
 a[href$=".bmp"].file,
 a[href$=".tif"].file,
+a[href$=".ico"].file,
+a[href$=".webp"].file,
+a[href$=".jxl"].file,
+a[href$=".avif"].file,
 a.file.link-image[href] {
 	color: #cecb00;
 }
@@ -102,6 +106,8 @@ a[href$=".jar"].file,
 a[href$=".vb"].file,
 a[href$=".prg"].file,
 a[href$=".sh"].file,
+a[href$=".htm"].file,
+a[href$=".html"].file,
 a.file.link-exe[href] {
 	color: #23fd00;
 }
@@ -109,3 +115,8 @@ a.file.link-exe[href] {
 a[href$="/"].directory {
 	color: #1a8fff;
 }
+
+a:hover {
+	opacity: 67%;
+}
+
